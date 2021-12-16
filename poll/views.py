@@ -4,10 +4,17 @@ from django.http import HttpResponse
 from .forms import CreatePollForm
 from .models import Poll
 
+from django.core.paginator import Paginator
+
 def home(request):
-    polls = Poll.objects.all()
+    polls = Poll.objects.all().order_by('id')
+
+    paginator = Paginator(polls,3,orphans=1)
+    page_number = request.GET.get('page')
+    page_obj = paginator.get_page(page_number)
+
     context = {
-        'polls' : polls
+        'page_obj' : page_obj
     }
     return render(request, 'poll/home.html', context)
 

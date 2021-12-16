@@ -10,7 +10,9 @@
                 <h3 class="panel-title">Available Polls</h3>
             </div>
             <ul class="list-group">
-                {% for poll in polls %}
+
+                {% if is_paginated %}
+                {% for poll in page_obj %}
                 <li class="list-group-item">
                     <strong>{{ poll.question }}</strong>
                     <span class="pull-right">
@@ -19,9 +21,37 @@
                     </span>
                 </li>
                 {% endfor %}
-            </ul>
+                {% else %}
+                    {% for poll in page_obj %}
+                    <li class="list-group-item">
+                        <strong>{{ poll.question }}</strong>
+                        <span class="pull-right">
+                            <a href="{% url 'vote' poll.id %}" class="btn btn-info btn-xs">Vote</a> &nbsp;
+                            <a href="{% url 'results' poll.id %}" class="btn btn-default btn-xs">View Results</a> &nbsp;
+                        </span>
+                    </li>
+                    {% endfor %}
 
+                {% endif %}
+            </ul>
         </div>
+
+        <div>
+            <span>
+                {% if page_obj.has_previous %}
+                <a href="?page={{page_obj.previous_page_number}}">
+                    <button type="button" class="btn btn-info btn-mg" data-toggle="button" aria-pressed="false" autocomplete="off">Previous</button>
+                </a>
+                {% endif %}
+                <span class="text-info">Page {{page_obj.number}} of {{page_obj.paginator.num_pages}}</span>
+                {% if page_obj.has_next %}
+                <a href="?page={{page_obj.next_page_number}}">
+                    <button type="button" class="btn btn-info btn-mg" data-toggle="button" aria-pressed="false" autocomplete="off">Next</button>
+                </a>
+                {% endif %}
+            </span>
+        </div>
+
     </div>
 </div>
 {% endblock %}
