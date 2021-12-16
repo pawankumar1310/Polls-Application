@@ -16,10 +16,10 @@ I have created a model name Poll(Question) and a poll has a question and three o
 
 ## Output
 <div align="center">
-<img src="Output_Screenshot/poll.PNG" width="800"/>   
-<img src="Output_Screenshot/polls_create.PNG" width="800"/>  
-<img src="Output_Screenshot/polls_vote.PNG" width="800"/>  
-<img src="Output_Screenshot/poll_result.PNG" width="800"/> 
+<img src="images/poll.PNG" width="800"/>   
+<img src="images/polls_create.PNG" width="800"/>  
+<img src="images/polls_vote.PNG" width="800"/>  
+<img src="images/poll_result.PNG" width="800"/> 
 </div>
 
 ## Acknowledgements/Prerequisites
