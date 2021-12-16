@@ -62,7 +62,7 @@ I have created a model name Poll(Question) and a poll has a question and three o
  - **Another way to create virtual environment (Open terminal or CMD)**
     1. Create a new virtual environment: `` python -m venv Env_Name ``
     2. To activate virtual environment: `` Env_Name\Scripts\activate.bat`` But on Unix or MacOS: ``source Env_Name/bin/activate`` 
-    3. Install Django : `` pip install Django ``
+    3. Install Django : `` pip install django ``
       - [How to setup virtual environment for Django project](https://www.youtube.com/watch?v=APOPm01BVrk&ab_channel=CoreySchafer)
       - Using this way, virtual environment is install in your current directory.
       - **Note : -** In terminal virtual environment not seen.In CMD virtual environment see after activate it.To deactivate virtual environment simply type `` deactivate`` and to delete virtual environement ,type ``rmdir Env_Name /s`` and Uninstall django,type ``pip uninstall django``
