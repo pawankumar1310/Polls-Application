@@ -52,8 +52,8 @@ I have created a model name Poll(Question) and a poll has a question and three o
 - We can create virtual environment two ways.
 - **First way (Open CMD or Terminal)**
     1. Install virtual environment wrapper :  `` pip install virtualenvwrapper-win ``
-    2. Create a new virtual environment : `` mkvirtualenv Env_Name ``
-    3. To activate virtual environment : `` workon Env_Name ``
+    2. Create a new virtual environment : `` mkvirtualenv Env_Name `` Example : ``mkvirtualenv poll_env``
+    3. To activate virtual environment : `` workon Env_Name `` Example : ``workon poll_env``
     4. Install Django : `` pip install django ``
     - [How to setup virtual environment for Django project](https://www.youtube.com/watch?v=F_xWv0Q_dLE&ab_channel=GeekyShows)
     - Using this, virtual environment is install in your default working directory(C Drive).In **Envs** folder virtual environment(Env_Name) is present.
