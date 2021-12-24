@@ -40,10 +40,13 @@ I have created a model name Poll(Question) and a poll has a question and three o
 - To check pip: `` pip --version `` 
 - To check all packages in your system: `` pip freeze ``
 - To check Django install in your sytem or not,type: `` django-admin --version ``
+- To install requirements.txt file, type : ``pip install -r requirements.txt``
 
 - Used to two extra packages for this poll application
      1. `` pip install django-widget-tweaks`` run this command and also install in ``settings.py`` file.This command is used for styling the widgets so that website look good.
      2. ``pip install pylint`` This command is used to handle the problem such as **unable to import Django.shortcuts** [For more details click here](https://stackoverflow.com/questions/59800115/unable-to-import-django-shortcuts).
+     3. [How to protect your Django secret key using the .env file](https://www.youtube.com/watch?v=myqfTX9ZbTs&ab_channel=CodeBand)
+         - [How to protect your Django secret key using the .env file official website](https://pypi.org/project/python-decouple/)
 
 ### Initial setup to build Django Project ###
 - First we need to create a virtual environment.Using a virtual environment avoids installing Django into a global python environment and we will have exact control over the libraries used in an application.
@@ -75,4 +78,9 @@ I have created a model name Poll(Question) and a poll has a question and three o
  5. Run the sever : `` python manage.py runserver ``
  6. Open website in browser at ``http://localhost:8000`` or admin at ``http://localhost:8000/admin``
  7. Quit the server : ``ctrl+c``
+ 
+ - Whenever you edit your model fields (adding a new one, changing an existing one or altering any of the arguments it takes) then you should always run migrations.
+ ``python manage.py makemigrations <app>`` : Create the migrations (generate the SQL commands).
+ - ``python manage.py migrate`` : Run the migrations (execute the SQL commands).
+ - To create super user, type : ``python manage.py createsuperuser``
 
