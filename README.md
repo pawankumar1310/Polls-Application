@@ -45,8 +45,11 @@ I have created a model name Poll(Question) and a poll has a question and three o
 - Used to two extra packages for this poll application
      1. `` pip install django-widget-tweaks`` run this command and also install in ``settings.py`` file.This command is used for styling the widgets so that website look good.
      2. ``pip install pylint`` This command is used to handle the problem such as **unable to import Django.shortcuts** [For more details click here](https://stackoverflow.com/questions/59800115/unable-to-import-django-shortcuts).
-     3. [How to protect your Django secret key using the .env file](https://www.youtube.com/watch?v=myqfTX9ZbTs&ab_channel=CodeBand)
-         - [How to protect your Django secret key using the .env file official website](https://pypi.org/project/python-decouple/)
+     3. [How to protect your Django secret key using the .env file official website](https://pypi.org/project/python-decouple/)
+         - [How to protect your Django secret key using the .env file](https://www.youtube.com/watch?v=myqfTX9ZbTs&ab_channel=CodeBand)    
+     4. [How to deploy a Django app website to Heroku using Github Repository](https://medium.com/@shashankmohabia/deploying-a-django-app-to-heroku-using-github-repository-319c04a11c1a)
+        - [How to host Django website | Deploy Django project to Heroku | Host django project](https://www.youtube.com/watch?v=nGlMa4KRnmA&list=LL&index=3&ab_channel=CodeKeen)
+
 
 ### Initial setup to build Django Project ###
 - First we need to create a virtual environment.Using a virtual environment avoids installing Django into a global python environment and we will have exact control over the libraries used in an application.
